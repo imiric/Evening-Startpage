@@ -5,20 +5,21 @@
  * Made by TB-96 2020
  *
  */
+/* Based on Kaolin Dark: https://github.com/ogdenwebb/emacs-kaolin-themes/wiki/Kaolin-dark-theme */
 :root {
-  --color-theme: #777777;
-  --bg-primary: #222222;
-  --bg-secondary: rgba(102,102,102,.5);
-  --bg-hover: rgba(119,119,119,.5);
-  --color-primary: #999999;
-  --color-secondary: #777777;
-  --color-white: #999999;
-  --color-success: #1A7F39;
-  --color-warning: #E5BF00;
-  --color-danger: #E5002E;
+  --color-theme: #6fb593;
+  --bg-primary: #1c1e26;
+  --bg-secondary: rgba(46,51,60,.5);
+  --bg-hover: rgba(111,181,147,.3);
+  --color-primary: #e4e4e8;
+  --color-secondary: #6fb593;
+  --color-white: #efeff1;
+  --color-success: #6fb593;
+  --color-warning: #ffb380;
+  --color-danger: #e55561;
   --padding: 1rem;
   --rounded: 0.25rem;
-  --shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.12)
+  --shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.12);
 }
 
 * {
