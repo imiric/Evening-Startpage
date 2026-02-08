@@ -73,8 +73,7 @@ document.onkeypress = (e) => {
     search.onkeyup = (e) => {
       let args   = e.target.value.split(' '),
           prefix = args[0],
-          engine = engines['k'][0], // the default engine (Kagi in this case)
-          str    = 0;
+          engine = engines['k'][0]; // the default engine (Kagi in this case)
 
       $s.qA('.search-engines li p').forEach((eng) => {
         let current = eng.parentNode;
@@ -85,10 +84,12 @@ document.onkeypress = (e) => {
       });
 
       if (e.key == 'Enter') {
-        if (prefix.indexOf('!') == 0)
-          (engine = engines[prefix.substr(1)][0], str = prefix.length + 1);
+        if (prefix.indexOf('!') == 0) {
+          engine = engines[prefix.substring(1)][0];
+          args = args.slice(1);
+        }
 
-        window.location = engine + args.join(' ').substr(str).toString().replace(/\s+/m, '%20');
+        window.location = engine + encodeURIComponent(args.join(' '));
       } else if (e.keyCode == 27)
         search.classList.remove('active');
     };
